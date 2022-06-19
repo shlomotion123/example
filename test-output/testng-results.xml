@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29591" started-at="2022-06-19T01:28:19 EDT" finished-at="2022-06-19T01:28:49 EDT">
+  <suite name="Default suite" duration-ms="29709" started-at="2022-06-19T01:43:34 EDT" finished-at="2022-06-19T01:44:04 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29591" started-at="2022-06-19T01:28:19 EDT" finished-at="2022-06-19T01:28:49 EDT">
+    <test name="Default test" duration-ms="29709" started-at="2022-06-19T01:43:34 EDT" finished-at="2022-06-19T01:44:04 EDT">
       <class name="example.TestAmazon">
-        <test-method status="PASS" signature="test([Ljava.lang.String;)[pri:0, instance:example.TestAmazon@5ae63ade]" name="test" duration-ms="29516" started-at="2022-06-19T01:28:19 EDT" data-provider="data-provider" finished-at="2022-06-19T01:28:49 EDT">
+        <test-method status="PASS" signature="test([Ljava.lang.String;)[pri:0, instance:example.TestAmazon@5ae63ade]" name="test" duration-ms="29640" started-at="2022-06-19T01:43:34 EDT" data-provider="data-provider" finished-at="2022-06-19T01:44:04 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@413d1baf]]>
+                <![CDATA[[Ljava.lang.String;@1a75e76a]]>
               </value>
             </param>
           </params>

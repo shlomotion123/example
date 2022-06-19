@@ -15,15 +15,13 @@ import org.testng.annotations.Test;
 
 public class TestAmazon {
 
-
-
-
 	@DataProvider(name = "data-provider")
 	public static Object[][] dataProviderMethod() {
 		return new Object[][] {{"TV, Appliances, Electronics",
 			"Television", 
 			"Samsung", 
-		"Price: High to Low"}};
+			"Price: High to Low",
+			"About this item"}};
 	}
 	@Test(dataProvider = "data-provider")
 
@@ -32,7 +30,7 @@ public class TestAmazon {
 
 		AmazonHomePage homePage = new AmazonHomePage("Chrome", "Headed");
 		homePage.navigate();
-		homePage.searchForAnItem(data);
+		Assert.assertTrue(homePage.searchForAnItem(data));
 
 		//}
 	}

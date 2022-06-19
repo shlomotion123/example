@@ -29,7 +29,7 @@ public class AmazonHomePage extends BasePage {
 		this.page.click(locator_hamburger);
 	}
 
-	public void searchForAnItem(String text[]) {
+	public boolean searchForAnItem(String text[]) {
 
 		// page.click("[aria-label=\"Open Menu\"]");
 		this.clickHamburger();
@@ -54,6 +54,10 @@ public class AmazonHomePage extends BasePage {
 			page.click(
 					"(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]");
 		});
+		Locator locator = page.locator(text[4]);
+		if (locator != null)
+			return true;
+		return false;
 
 	}
 }

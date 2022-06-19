@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29591" started-at="2022-06-19T01:28:19 EDT" finished-at="2022-06-19T01:28:49 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29591" started-at="2022-06-19T01:28:19 EDT" finished-at="2022-06-19T01:28:49 EDT">
+      <class name="example.TestAmazon">
+        <test-method status="PASS" signature="test([Ljava.lang.String;)[pri:0, instance:example.TestAmazon@5ae63ade]" name="test" duration-ms="29516" started-at="2022-06-19T01:28:19 EDT" data-provider="data-provider" finished-at="2022-06-19T01:28:49 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@413d1baf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- example.TestAmazon -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

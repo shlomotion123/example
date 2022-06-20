@@ -1,6 +1,8 @@
 package example;
 
 import models.AmazonHomePage;
+import models.ItemsPage;
+
 import com.microsoft.playwright.*;
 
 import static org.junit.Assert.*;
@@ -17,22 +19,27 @@ public class TestAmazon {
 
 	@DataProvider(name = "data-provider")
 	public static Object[][] dataProviderMethod() {
+		// Parameters. Main Category, Sub category, sort order, nth item on list, text to assert
 		return new Object[][] {{"TV, Appliances, Electronics",
 			"Television", 
 			"Samsung", 
 			"Price: High to Low",
-			"About this item"}};
+			"2",
+			// text to assert
+		"About this item"}};
 	}
 	@Test(dataProvider = "data-provider")
 
 	public void test(String data[]) {
 
-
 		AmazonHomePage homePage = new AmazonHomePage("Chrome", "Headed");
 		homePage.navigate();
-		Assert.assertTrue(homePage.searchForAnItem(data));
+		Page page = homePage.searchForAnItem(data);
+		ItemsPage items = new ItemsPage(page);
+		items.clickOnSelectedItem(data[4]); 
+		Assert.assertTrue(items.verifyTextOnAPage (data[5]));
+		homePage.closeBrowser();
 
-		//}
 	}
 }
 

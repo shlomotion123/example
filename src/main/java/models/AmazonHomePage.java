@@ -9,7 +9,8 @@ public class AmazonHomePage extends BasePage {
 	private final Page page;
 
 	private final String locator_hamburger = "[aria-label=\"Open Menu\"]";
-
+	private final String itemFromList = "a-size-base-plus a-color-base a-text-normal";
+	                                     
 	public AmazonHomePage(String browserName, String mode) {
 		// Page page = context.newPage();
 		Browser browser = this.launchPlaywright(browserName, mode);
@@ -29,35 +30,32 @@ public class AmazonHomePage extends BasePage {
 		this.page.click(locator_hamburger);
 	}
 
-	public boolean searchForAnItem(String text[]) {
-
-		// page.click("[aria-label=\"Open Menu\"]");
+	public Page searchForAnItem(String testData[]) {
 		this.clickHamburger();
 
-		this.clickLinkText(text[0]);
+		this.clickLinkText(testData[0]);
 
-		page.click("text=" + text[1]);
+		page.click("text=" + testData[1]);
 
 		page.waitForNavigation(() -> {
 
-			page.click("xpath=//span[@class='a-size-base a-color-base'][normalize-space()='" + text[2] + "']");
+			page.click("xpath=//span[@class='a-size-base a-color-base'][normalize-space()='" + testData[2] + "']");
 		});
 
 		page.click("text=Sort by:Featured");
 
 		page.waitForNavigation(() -> {
-			this.clickLinkText(text[3]);
+			this.clickLinkText(testData[3]);
 
 		});
+		
 
-		Page page1 = page.waitForPopup(() -> {
-			page.click(
-					"(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]");
-		});
-		Locator locator = page.locator(text[4]);
-		if (locator != null)
-			return true;
-		return false;
+//		Page page1 = page.waitForPopup(() -> {
+//			page.click(
+//					 this.itemFromList + "[" + testData[4] +  "]");
+//		});
+		return page;
+		
 
 	}
 }

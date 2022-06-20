@@ -38,7 +38,7 @@ public class BasePage {
         if (headless.equalsIgnoreCase("true")) {
             browser =  browserType.launch(new BrowserType.LaunchOptions().setHeadless(false));
         } else {
-        	//playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50));
+        
             browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(false));
         }
         return browser;
@@ -46,14 +46,11 @@ public class BasePage {
      
       
     }
-
-//    public void captureScreenshot(final Path fileName) {
-//        page.screenshot(
-//                new Page.ScreenshotOptions().setPath(
-//                		fileName
-//                       
-//                        )
-//                ).setFullPage(true)
-//        
-//    }
+    public void closeBrowser()
+    {
+    	this.browser.close();
+    }
 }
+
+
+

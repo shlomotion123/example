@@ -10,7 +10,6 @@ Running example.TestAmazon
 Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@277c0f21
 1
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.416 sec
-The batch file cannot be found.
 
 Results :
 

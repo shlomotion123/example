@@ -5,9 +5,7 @@ import models.ItemsPage;
 
 import com.microsoft.playwright.*;
 
-
 import java.util.Collection;
-
 
 import java.util.Arrays;
 import org.testng.Assert;
